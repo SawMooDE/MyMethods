@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class BMICalculator{
+	
+public static void main(String [] args) {	
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter your weight in kilograms.");
+	double weight=sc.nextDouble();
+	System.out.println("Enter your height in meter.");
+	double height=sc.nextDouble();
+	double bmi = BMI(weight,height);
+	System.out.println("Your BMI is "+ bmi);
+	sc.close();
+}
+public static double BMI(double weight, double height) {
+	double squareHeight = Math.pow(height, 2);
+	return weight/squareHeight;
+}
+}
